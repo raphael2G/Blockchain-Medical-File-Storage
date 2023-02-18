@@ -1,0 +1,26 @@
+{
+  "name": "blockchain",
+  "version": "1.0.0",
+  "description": "Universal patient file storage on global blockchain ledger to increase quality of care and speed.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc -w",
+    "start": "tsc && node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphael2G/Blockchain-Medical-File-Storage.git"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.31",
+    "typescript": "^4.2.2"
+  },
+  
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raphael2G/Blockchain-Medical-File-Storage/issues"
+  },
+  "homepage": "https://github.com/raphael2G/Blockchain-Medical-File-Storage#readme"
+}
