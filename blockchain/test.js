@@ -1,4 +1,4 @@
-const { Block, BlockChain, Transaction } = require("./blockchain/blockchain.js");
+const { Block, BlockChain, Transaction } = require("./blockchain");
 const EC = require("elliptic").ec, ec = new EC("secp256k1");
 
 
