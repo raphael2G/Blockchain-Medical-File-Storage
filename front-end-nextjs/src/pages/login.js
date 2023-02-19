@@ -18,8 +18,8 @@ export default function Signin() {
             <div className="max-w-xl mx-auto px-6 py-12 md:p-16 bg-white rounded shadow-lg">
               <div className="max-w-sm mx-auto text-center">
                 <img
-                  className="block mx-auto mb-6"
-                  src="pstls-assets/logos/pstls-logo-form.svg"
+                  className="block mx-auto mb-6 h-16"
+                  src="/medi.png"
                   alt=""
                 />
                 <h2 className="text-4xl font-heading mb-2">Sign Up</h2>
