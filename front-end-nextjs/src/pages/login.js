@@ -24,17 +24,17 @@ export default function Signin() {
                 />
                 <h2 className="text-4xl font-heading mb-2">Sign Up</h2>
                 <p className="leading-8 mb-6">
-                  Start journey with our product.
+                  Start your journey towards universal health
                 </p>
                 <form className="text-left" action>
                   <label className="block mb-6">
-                    <span className="text-sm">Public key</span>
+                    {/* <span className="text-sm">Public key</span>
                     <input
                       className="mt-2 w-full py-3 px-4 border border-gray-200 outline-none"
                       type="text"
                       aria-describedby="emailHelp"
                       placeholder="Your public key"
-                    />
+                    /> */}
                   </label>
                   <label className="block mb-6">
                     <span className="text-sm">E-mail</span>
