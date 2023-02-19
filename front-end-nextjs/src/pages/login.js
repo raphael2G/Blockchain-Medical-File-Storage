@@ -6,11 +6,11 @@ export default function Signin() {
           <div className="w-full lg:w-1/2 px-4 mb-20 lg:mb-0">
             <div className="max-w-xl xl:max-w-md mx-auto">
               <h2 className="text-4xl md:text-5xl font-heading mb-6">
-                Free Philippine Real Estate Ads Forums And Classifieds
+                Say hello to secure medical records.
               </h2>
               <p className="leading-8">
-                Dream interpretation has many forms; it can be done be done for
-                the sake of fun, hobby or can be taken up as a serious career.
+                WE are a decentralized medical file storage system that allows
+                you to store your medical records in a secure and private way.
               </p>
             </div>
           </div>
@@ -22,9 +22,9 @@ export default function Signin() {
                   src="/medi.png"
                   alt=""
                 />
-                <h2 className="text-4xl font-heading mb-2">Sign Up</h2>
+                <h2 className="text-4xl font-heading mb-2">Login</h2>
                 <p className="leading-8 mb-6">
-                  Start your journey towards universal health
+                  Your journey towards universal health
                 </p>
                 <form className="text-left" action>
                   <label className="block mb-6">
