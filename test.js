@@ -9,6 +9,11 @@ const hospital = ec.genKeyPair();
 const patient1 = ec.genKeyPair();
 const patient2 = ec.genKeyPair();
 
+console.log('weoigw wgoj wefgwregj')
+console.log(hospital)
+console.log('weoigw wgoj wefgwregj')
+
+
 console.log('Hospital Public Key: ')
 console.log('Hospital Private Key: ')
 console.log(' - - - - - - - - - - - - - - - ')
