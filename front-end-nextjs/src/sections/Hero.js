@@ -42,12 +42,14 @@ export default function Hero() {
             <div className="flex flex-wrap items-center">
               <div className="w-auto hidden lg:block">
                 <div className="inline-block">
-                  <button
-                    className="py-2.5 px-4 text-base w-full font-medium border border-gray-400 hover:border-gray-500 rounded-xl focus:ring focus:ring-gray-50 bg-white hover:bg-gray-50 transition ease-in-out duration-200"
-                    type="button"
-                  >
-                    Login
-                  </button>
+                  <a href="/login">
+                    <button
+                      className="py-2.5 px-4 text-base w-full font-medium border border-gray-400 hover:border-gray-500 rounded-xl focus:ring focus:ring-gray-50 bg-white hover:bg-gray-50 transition ease-in-out duration-200"
+                      type="button"
+                    >
+                      Login
+                    </button>
+                  </a>
                 </div>
               </div>
               <div className="w-auto lg:hidden">
