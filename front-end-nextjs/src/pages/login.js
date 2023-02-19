@@ -47,7 +47,7 @@ export default function Signin() {
 
                   <a
                     className="inline-block mt-6 mb-4 w-full px-8 py-3 text-center text-white font-bold bg-black hover:bg-gray-900"
-                    href="#"
+                    href="/home"
                   >
                     Sign Up
                   </a>
