@@ -44,13 +44,21 @@ class BlockChain {
 
         this.chain.forEach(block => {
             block.data.forEach(transaction => {
-                if (address === transaction.to || address == transaction.from) {
-                    report += 'Date: ' + transaction.date + '\n' + 'Entry: ' + JSON.stringify(transaction.data) + '\n';
+                if (address === transaction.to) {
+                    report += 'Recieved* ' + 'Date: ' + transaction.date + '\n' + 'Entry: ' + JSON.stringify(transaction.data) + '\n';
+                }
+
+                if (address == transaction.from) {
+                    report += 'Sent* ' + 'Date: ' + transaction.date + '\n' + 'Entry: ' + JSON.stringify(transaction.data) + '\n';
                 }
             })
         });
+        
+        if (report) {
+            return report;
+        }
 
-        return report;
+        return 'no data found for ' + address;
     }
 
 }
