@@ -4,6 +4,7 @@ const crypto = require("crypto")
 class BlockChain {
     constructor() {
         this.chain = [new Block(Date.now().toString())];
+        this.transactions = [];
     }
 
     getLastBlock() {
@@ -27,6 +28,31 @@ class BlockChain {
         }
         return true;
     }
+
+    addTransaction(transaction) {
+        this.transactions.push(transaction);
+    }
+
+    mineTransactions() {
+        this.addBlock(new Block(Date.now().toString(), this.transactions));
+
+        this.transactions = [];
+    }
+
+    getReport(address) {
+        let report = '';
+
+        this.chain.forEach(block => {
+            block.data.forEach(transaction => {
+                if (address === transaction.to || address == transaction.from) {
+                    report += 'Date: ' + transaction.date + '\n' + 'Entry: ' + JSON.stringify(transaction.data) + '\n';
+                }
+            })
+        });
+
+        return report;
+    }
+
 }
 
 class Block {
@@ -40,6 +66,35 @@ class Block {
     getHash() {
         return crypto.createHash("sha256").update(this.timestamp + JSON.stringify(this.data) + this.previousHash).digest('hex');
     }
+
+    
 }
 
-module.exports = {BlockChain, Block}
+class Transaction {
+    constructor(from, to, date, data) {
+        this.from = from;
+        this.to = to;
+        this.date = date;
+        this.data = data;
+    }
+
+    sign(keyPair) {
+        if (keyPair.getPublic("hex") === this.from) {
+            this.signature = keyPair.sign(
+                crypto.createHash("sha256").update(this.from + this.to + JSON.stringify(this.data))
+                .digest('hex'), "base64").toDER("hex");
+            }
+        }
+    
+
+    isValid(transaction) {
+        return (
+            transaction.from &&
+            transaction.to &&
+            transaction.data &&
+            ec.keyFromPublic(transaction.from, "hex").verify(SHA256(transaction.from + transaction.to + transaction.date + transaction.data), transaction.signature)
+        );
+    }
+}
+
+module.exports = {BlockChain, Block, Transaction}
