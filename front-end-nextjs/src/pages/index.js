@@ -4,6 +4,8 @@ import { Inter } from "@next/font/google";
 import logo from "../../public/medi.png";
 import Hero from "@/sections/Hero";
 import Features from "@/sections/features";
+import Stats from "@/sections/stats";
+import { Benifits } from "@/sections/benifits";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +20,8 @@ export default function Home() {
       </Head>
       <Hero />
       <Features />
+      <Stats />
+      <Benifits />
     </>
   );
 }
