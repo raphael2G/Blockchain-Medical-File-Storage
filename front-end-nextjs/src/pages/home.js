@@ -203,7 +203,12 @@ export default function Home() {
                   </div>
                   <div className="w-full md:w-auto p-1.5">
                     <button className="flex flex-wrap justify-center w-full px-4 py-2 bg-green-500 hover:bg-green-600 font-medium text-sm text-white border border-green-500 rounded-md shadow-button">
-                      <a href='/updates'>Push to blockchain</a>
+                      <a 
+                      href='/updates'
+                      onClick={fetch('http://localhost:9001/createTransaction/to/from/data')}
+                      >
+                      Push to blockchain
+                      </a>
                     </button>
                   </div>
                 </div>
