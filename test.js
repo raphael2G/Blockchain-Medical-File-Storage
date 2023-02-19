@@ -9,6 +9,16 @@ const hospital = ec.genKeyPair();
 const patient1 = ec.genKeyPair();
 const patient2 = ec.genKeyPair();
 
+console.log('Hospital Public Key: ')
+console.log('Hospital Private Key: ')
+console.log(' - - - - - - - - - - - - - - - ')
+console.log('patient1 Public Key: ', patient1.getPublic())
+console.log('patient1 Private Key: ', patient1.getPrivate())
+console.log(' - - - - - - - - - - - - - - - ')
+console.log('patient2 Public Key: ', patient1.getPublic())
+console.log('patient2 Private Key: ', patient1.getPrivate())
+console.log(' - - - - - - - - - - - - - - - ')
+
 //  - - - - - - -- - -- - block 1 - - - - - - -- - -- - 
 
 json_data = {Height: "5'8", EyeColour: "Hazel", Gender: "Male"}
