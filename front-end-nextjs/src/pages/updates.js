@@ -1,8 +1,25 @@
 export default function Updates() {
-    return (
-        <>
+  return (
+    <>
       <section className="bg-white py-4">
         <div className="container px-4 mx-auto">
+          <section className="pt-8 px-6 bg-white">
+            <h2 className="mb-4 text-2xl font-bold">Project Name</h2>
+            <div className="flex flex-wrap text-sm text-center">
+              <a
+                className="inline-block w-full md:w-1/2 lg:w-auto mb-4 lg:mb-0 px-4 pb-2 text-gray-300 border-b-2 border-transparent hover:border-gray-300 "
+                href="/dashboard"
+              >
+                View
+              </a>
+              <a
+                className=" inline-block w-full md:w-1/2 lg:w-auto mb-4 lg:mb-0 px-4 pb-2 border-b-2 border-indigo-500 text-indigo-500"
+                href="/updates"
+              >
+                Update
+              </a>
+            </div>
+          </section>
           <div>
             <div className="p-6 pb-0 h-full overflow-hidden bg-white rounded-t-md">
               <div className="pb-6 border-b border-coolGray-100">
@@ -12,7 +29,8 @@ export default function Updates() {
                       Medical Updates
                     </h2>
                     <p className="text-xs text-coolGray-500 font-medium">
-                      Update any recent treatments, diagnoses, complications, or other
+                      Update any recent treatments, diagnoses, complications, or
+                      other
                     </p>
                   </div>
                 </div>
@@ -121,7 +139,7 @@ export default function Updates() {
                   </div>
                   <div className="w-full md:w-auto p-1.5">
                     <button className="flex flex-wrap justify-center w-full px-4 py-2 bg-green-500 hover:bg-green-600 font-medium text-sm text-white border border-green-500 rounded-md shadow-button">
-                      <a href='/dashboard'>Push to blockchain</a>
+                      <a href="/dashboard">Push to blockchain</a>
                     </button>
                   </div>
                 </div>
@@ -131,5 +149,5 @@ export default function Updates() {
         </div>
       </section>
     </>
-    );
+  );
 }

@@ -1,8 +1,26 @@
 export default function Dashboard() {
-    return (
-        <>
-            <section className="bg-white py-4">
+  return (
+    <>
+      <section className="bg-white py-4">
         <div className="container px-4 mx-auto">
+          <section className="pt-8 px-6 bg-white">
+            <h2 className="mb-4 text-2xl font-bold">Project Name</h2>
+            <div className="flex flex-wrap text-sm text-center">
+              <a
+                className="inline-block w-full md:w-1/2 lg:w-auto mb-4 lg:mb-0 px-4 pb-2 border-b-2 border-indigo-500 text-indigo-500"
+                href="/dashboard"
+              >
+                View
+              </a>
+              <a
+                className="inline-block w-full md:w-1/2 lg:w-auto mb-4 lg:mb-0 px-4 pb-2 text-gray-300 border-b-2 border-transparent hover:border-gray-300"
+                href="/updates"
+              >
+                Update
+              </a>
+            </div>
+          </section>
+
           <div>
             <div className="p-6 pb-0 h-full overflow-hidden bg-white rounded-t-md">
               <div className="pb-6 border-b border-coolGray-100">
@@ -37,7 +55,6 @@ export default function Dashboard() {
                             type="text"
                             placeholder="Patient's Public Key"
                           />
-
                         </div>
                       </div>
                     </div>
@@ -55,7 +72,7 @@ export default function Dashboard() {
                   </div>
                   <div className="w-full md:w-auto p-1.5">
                     <button className="flex flex-wrap justify-center w-full px-4 py-2 bg-green-500 hover:bg-green-600 font-medium text-sm text-white border border-green-500 rounded-md shadow-button">
-                      <a href='/dashboard'>View Patient File</a>
+                      <a href="/dashboard">View Patient File</a>
                     </button>
                   </div>
                 </div>
@@ -64,6 +81,6 @@ export default function Dashboard() {
           </div>
         </div>
       </section>
-        </>
-    );
+    </>
+  );
 }
